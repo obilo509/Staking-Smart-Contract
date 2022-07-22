@@ -3,10 +3,10 @@ pragma solidity 0.8.4;
 
 contract Staker {
 
-  ExampleExternalContract public exampleExternalContract;
+  address public owner;
 
   constructor(address exampleExternalContractAddress) public {
-      exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
+     owner = msg.sender;
   }
 
   uint256 public constant threshold = 1 wei;
